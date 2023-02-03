@@ -1,0 +1,8 @@
+einops==0.4.1
+numpy==1.19.5
+opt_einsum==3.3.0
+Pillow==9.4.0
+PyYAML==6.0
+timm
+torch
+torchvision
