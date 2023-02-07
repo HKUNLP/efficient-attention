@@ -1,6 +1,6 @@
 # Efficient Attentions
 
-This repository contains the official implementation of experiments conducted in
+This repository contains the implementation of experiments conducted in
 - [EVA: Efficient attention via control variates (ICLR 2023)](https://openreview.net/forum?id=G-uNfHKrj46)
 - [LARA: Linear complexity randomized self-attention mechanism (ICML 2022)](https://arxiv.org/abs/2204.04667)
 
