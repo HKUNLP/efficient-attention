@@ -1,6 +1,6 @@
 # Efficient Attentions
 
-This repository contains the implementation of experiments conducted in
+This repository contains the official implementation of experiments conducted in
 - [EVA: Efficient attention via control variates (ICLR 2023)](https://openreview.net/forum?id=G-uNfHKrj46)
 - [LARA: Linear complexity randomized self-attention mechanism (ICML 2022)](https://arxiv.org/abs/2204.04667)
 
@@ -209,11 +209,11 @@ We also provide trained `EVA` model checkpoints in [OneDrive](https://connecthku
 ## Citation
 ```bibtex
 @inproceedings{zheng2023efficient,
-title={Efficient Attention via Control Variates},
-author={Lin Zheng and Jianbo Yuan and Chong Wang and Lingpeng Kong},
-booktitle={International Conference on Learning Representations},
-year={2023},
-url={https://openreview.net/forum?id=G-uNfHKrj46}
+  title={Efficient Attention via Control Variates},
+  author={Lin Zheng and Jianbo Yuan and Chong Wang and Lingpeng Kong},
+  booktitle={International Conference on Learning Representations},
+  year={2023},
+  url={https://openreview.net/forum?id=G-uNfHKrj46}
 }
 ```
 
