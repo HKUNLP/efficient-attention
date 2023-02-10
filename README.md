@@ -25,7 +25,7 @@ pip install -e efficient-attention
 
 # OPTIONAL: install fairseq library for running language tasks
 cd fairseq
-python3 setup.py build develop --user
+python3 setup.py build develop
 cd ..
 ```
 
