@@ -29,6 +29,8 @@ python3 setup.py build develop
 cd ..
 ```
 
+The environment is tested with **Python 3.8.10, PyTorch 1.12.0, and CUDA 11.3**. Also note our fork of fairseq modifies several files in the original codebase; using more recent versions of fairseq might lead to unexpected dependency conflicts.
+
 ## Basic Usage of the Efficient Attention Library
 `efficient-attention` is a small self-contained codebase that collects several efficient attention mechanisms.
 

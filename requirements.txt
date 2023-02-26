@@ -6,3 +6,5 @@ PyYAML==6.0
 timm
 torch
 torchvision
+Cython
+ninja
