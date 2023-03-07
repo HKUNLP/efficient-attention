@@ -52,6 +52,22 @@ class LinearRA(MultiheadAttention):
                 nn.Linear(num_channels, num_channels),
                 nn.LayerNorm(num_channels), 
                 )
+        elif self.proposal_gen.startswith('no-param-pool'):
+            # No additional parameters. 
+            # This could be useful if you want to use 
+            # LARA for inference with a pretrained softmax-attention model.
+            
+            # However, this option, when trained from scratch, 
+            # might not be as effective as the others.
+            output_size = int(math.sqrt(self.num_landmarks))
+            self.q_bar_gen = nn.Sequential(
+                nn.AdaptiveAvgPool2d(output_size),
+                FlattenTranspose(),
+                )
+            self.k_bar_gen = nn.Sequential(
+                nn.AdaptiveAvgPool2d(output_size),
+                FlattenTranspose(),
+                )
         elif self.proposal_gen.startswith('adaptive-1d'):
             self.q_bar_gen = nn.Sequential(
                 nn.Linear(num_channels, num_channels),
