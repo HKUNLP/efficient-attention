@@ -1,16 +1,14 @@
 import math
-from typing import Callable, Optional, Tuple, Dict
+import warnings
+
+import numpy as np
+import torch
+from efficient_attention import add_nested_argument
+from efficient_attention.attn_utils import pad_to_multiple, prm_projection
+from efficient_attention.local_attention import LocalAttention
 from einops import rearrange
 from torch import nn
-import torch
-from torch import Tensor
-import torch.nn.functional as F
-import numpy as np
-from functools import partial
-import warnings
-from efficient_attention import add_nested_argument
-from efficient_attention.local_attention import LocalAttention
-from efficient_attention.attn_utils import prm_projection, pad_to_multiple
+
 
 # adapted from 
 # https://github.com/lucidrains/FLASH-pytorch/blob/main/flash_pytorch/flash_pytorch.py#L54

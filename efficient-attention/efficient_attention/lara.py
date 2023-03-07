@@ -1,16 +1,11 @@
-
-# Copyright (c) 2015-present, Facebook, Inc.
-# All rights reserved.
 import math
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from functools import partial
 
-from timm.models.layers import trunc_normal_
 from efficient_attention import MultiheadAttention, add_nested_argument
 from efficient_attention.attn_utils import (
-     FlattenTranspose, hyperm_projection, prm_projection
+     FlattenTranspose, prm_projection
 )
 
 def default(val, d):

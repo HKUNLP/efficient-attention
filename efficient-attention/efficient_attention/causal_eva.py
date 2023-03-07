@@ -1,8 +1,3 @@
-# Copyright (c) Facebook, Inc. and its affiliates.
-#
-# This source code is licensed under the MIT license found in the
-# LICENSE file in the root directory of this source tree.
-
 import math
 from typing import Dict, Optional, Tuple, List
 import logging
@@ -219,6 +214,7 @@ def quant_noise(module, p, block_size):
     module.register_forward_pre_hook(_forward_pre_hook)
     return module
 
+# copied Fairseq modules here to avoid direct dependencies
 class FairseqDropout(nn.Module):
     def __init__(self, p, module_name=None):
         super().__init__()

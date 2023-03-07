@@ -1,16 +1,10 @@
 import math
-from typing import Callable, Optional, Tuple, Dict
-from einops import rearrange
-from torch import nn
 import torch
-from torch import Tensor
 from functools import partial
 import numpy as np
 from efficient_attention import add_nested_argument
 from efficient_attention.local_attention import LocalAttention
-from efficient_attention.kernelized_attention import (
-    KernelizedAttention, 
-    create_proj_matrix)
+from efficient_attention.kernelized_attention import KernelizedAttention
 from efficient_attention.attn_utils import log_add_exp
 
 def log_favorp_projection_for_scatterbrain(
